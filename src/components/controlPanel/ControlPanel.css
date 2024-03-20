@@ -1,0 +1,23 @@
+.control-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.1);
+  font-family: "system-ui";
+  font-size: 0.8em;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.control-panel-select {
+  border: none;
+  outline: 0px;
+}
+
+.control-panel-input {
+  border: none;
+  outline: 0px;
+  width: 50px;
+}

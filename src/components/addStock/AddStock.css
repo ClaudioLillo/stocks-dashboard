@@ -1,0 +1,35 @@
+.add-stock {
+  margin: 5px;
+}
+
+.add-stock-ticker {
+  font-size: 0.8em;
+  font-weight: 200;
+  font-family: arial, sans-serif;
+  width: 100px;
+  color: rgba(0, 0, 0, 0.8);
+  padding: 5px;
+}
+
+.add-stock-name {
+  font-size: 0.8em;
+  font-weight: 200;
+  font-family: arial, sans-serif;
+  width: 200px;
+  /* color: rgba(0, 0, 0, 0.8); */
+  padding: 5px;
+}
+
+.add-stock-tr:hover td {
+  background: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  color: white;
+}
+
+.add-stock-table {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-top: 5px;
+  border-collapse: collapse;
+}
