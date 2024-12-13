@@ -1,14 +1,5 @@
 import React from "react";
 
-const stockData = {
-  name: "Apple Inc.",
-  ticker: "AAPL",
-  price: 146.92,
-  min: 141.0,
-  max: 148.32,
-  values: [147.11, 145.77, 146.21, 147.56, 148.32, 141.0, 147.91, 146.37],
-};
-
 const getPairs = (data, x, y) => {
   const pairs = [];
   const { values } = data;
@@ -35,7 +26,25 @@ const getReferences = (data, x, y) => {
   return references;
 };
 
-export default function Dashboard({ posX, posY, x, y }) {
+export default function Dashboard({ posX, posY, x, y, data }) {
+  const dates = data.sort((a, b) => a.date - b.date).map((q) => q.date);
+
+  dates.forEach((date) => {
+    const dateObj = new Date(date);
+    console.log(dateObj.toISOString());
+  });
+
+  const values = data.map((q) => q.price);
+
+  const stockData = {
+    name: "Apple Inc.",
+    ticker: "AAPL",
+    price: values[values.length - 1],
+    min: Math.min(...values),
+    max: Math.max(...values),
+    values: values,
+  };
+
   const pairs = getPairs(stockData, x, y);
   const references = getReferences(stockData, x, y);
   return (
